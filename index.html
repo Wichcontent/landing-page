@@ -58,33 +58,29 @@
 
 
     <main>
-        <section class="hero">
-            <section id="inicio" class="hero">
-                <p class="hero-eyebrow">Soluciones digitales · Puebla, México</p>
 
-                <h1 class="hero-title">
-                    <span>Landing Pages y</span>
-                    <span class="muted">Diseño Web</span>
-                    <span>en Puebla</span>
-                </h1>
+        <section id="inicio" class="hero">
+            <p class="hero-eyebrow">Soluciones digitales · Puebla, México</p>
 
-                <p class="hero-description">
-                    Páginas web profesionales, WhatsApp optimizado y tiendas digitales.
-                    Listos en días, no en meses.
-                </p>
+            <h1 class="hero-title">
+                <span>Landing Pages y</span>
+                <span class="muted">Diseño Web</span>
+                <span>en Puebla</span>
+            </h1>
 
-                <div class="hero-actions">
-                    <a href="#paquetes" class="btn btn-primary">Ver paquetes</a>
-                    <a href="#proceso" class="btn btn-secondary">Cómo funciona</a>
-                </div>
-            </section>
+            <p class="hero-description">
+                Páginas web profesionales, WhatsApp optimizado y tiendas digitales.
+                Listos en días, no en meses.
+            </p>
 
-            <section id="servicios"></section>
-            <section id="paquetes"></section>
-            <section id="proceso"></section>
-            <section id="contacto"></section>
-
+            <div class="hero-actions">
+                <a href="#paquetes" class="btn btn-primary">Ver paquetes</a>
+                <a href="#proceso" class="btn btn-secondary">Cómo funciona</a>
+            </div>
         </section>
+
+
+
 
         <section id="servicios" class="services-strip" aria-label="Servicios principales">
             <span>Landing pages</span>
@@ -102,9 +98,9 @@
 
                 <div class="section-tabs-menu">
                     <a href="#resumen">Resumen</a>
-                    <a href="#landing-express">Landing Express</a>
-                    <a href="#web-negocio-pro">Web Negocio Pro</a>
-                    <a href="#mini-tienda">Mini Tienda</a>
+                    <a href="#detalle-paquete" data-package="landing">Landing Express</a>
+                    <a href="#detalle-paquete" data-package="pro">Web Negocio Pro</a>
+                    <a href="#detalle-paquete" data-package="mini">Mini Tienda</a>
                     <a href="#extras">Extras</a>
                 </div>
             </div>
@@ -119,21 +115,21 @@
             </div>
 
             <div class="package-summary-grid">
-                <article class="package-summary-card">
+                <article class="package-summary-card" data-package="landing">
                     <span>Paquete 01</span>
                     <h3>Landing Express</h3>
                     <p class="price">$3,800</p>
                     <p>MXN · Entrega 24–72 hrs</p>
                 </article>
 
-                <article class="package-summary-card is-featured">
+                <article class="package-summary-card is-featured" data-package="pro">
                     <span>Paquete 02</span>
                     <h3>Web Negocio Pro</h3>
                     <p class="price">$5,900</p>
                     <p>MXN · Más popular</p>
                 </article>
 
-                <article class="package-summary-card">
+                <article class="package-summary-card" data-package="mini">
                     <span>Paquete 03</span>
                     <h3>Mini Tienda Digital</h3>
                     <p class="price">$7,500</p>
@@ -147,7 +143,7 @@
                 <button type="button">Mini Tienda</button>
             </div>
 
-            <article id="landing-express" class="package-detail-card">
+            <article id="detalle-paquete" class="package-detail-card">
                 <div class="package-detail-header">
                     <div>
                         <p class="section-eyebrow">Paquete 01</p>

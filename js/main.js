@@ -104,16 +104,18 @@ function setupServicesCarousel() {
 }
 
 function setupPackageButtons() {
-  const buttons = document.querySelectorAll(".package-switcher button");
+  const switcherButtons = document.querySelectorAll(".package-switcher button");
   const summaryCards = document.querySelectorAll(".package-summary-card");
+  const tabLinks = document.querySelectorAll(
+    ".section-tabs-menu [data-package]",
+  );
   const order = ["landing", "pro", "mini"];
 
-  buttons.forEach((button, index) => {
+  switcherButtons.forEach((button, index) => {
     button.dataset.package = order[index];
 
     button.addEventListener("click", () => {
-      renderPackage(button.dataset.package);
-      setActiveButton(button);
+      selectPackage(button.dataset.package);
     });
   });
 
@@ -121,18 +123,63 @@ function setupPackageButtons() {
     card.dataset.package = order[index];
 
     card.addEventListener("click", () => {
-      renderPackage(card.dataset.package);
-      setActiveButton(buttons[index]);
+      selectPackage(card.dataset.package);
+    });
+  });
+
+  tabLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      selectPackage(link.dataset.package);
+
+      document.querySelector("#detalle-paquete").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     });
   });
 }
 
-function setActiveButton(activeButton) {
-  document
-    .querySelectorAll(".package-switcher button")
-    .forEach((button) => button.classList.remove("is-active"));
+function selectPackage(packageKey, shouldScroll = false) {
+  renderPackage(packageKey);
+  setActivePackageUI(packageKey);
 
-  activeButton.classList.add("is-active");
+  if (shouldScroll) {
+    scrollToPackageDetail();
+  }
+}
+
+function setActivePackageUI(packageKey) {
+  document.querySelectorAll(".package-switcher button").forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.package === packageKey);
+  });
+
+  document.querySelectorAll(".package-summary-card").forEach((card) => {
+    card.classList.toggle("is-featured", card.dataset.package === packageKey);
+  });
+
+  document
+    .querySelectorAll(".section-tabs-menu [data-package]")
+    .forEach((link) => {
+      link.classList.toggle("is-active", link.dataset.package === packageKey);
+    });
+}
+
+function scrollToPackageDetail() {
+  const header = document.querySelector(".site-header");
+  const detail = document.querySelector("#detalle-paquete");
+
+  if (!detail) return;
+
+  const headerHeight = header ? header.offsetHeight : 0;
+  const targetPosition =
+    detail.getBoundingClientRect().top + window.scrollY - headerHeight - 24;
+
+  window.scrollTo({
+    top: targetPosition,
+    behavior: "smooth",
+  });
 }
 
 function renderPackage(packageKey) {

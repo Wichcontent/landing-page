@@ -270,6 +270,11 @@ body {
   font-size: 14px;
   font-weight: 700;
 }
+.section-tabs-menu a.is-active {
+  border-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+}
 
 .packages-intro,
 .extras-intro {
@@ -317,6 +322,10 @@ body {
   border-radius: 8px;
   background: #20201f;
   text-align: center;
+}
+.package-summary-card.is-featured {
+  border-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
 }
 
 .package-summary-card span {
