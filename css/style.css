@@ -80,8 +80,13 @@ body {
   min-height: 42px;
   padding: 0 24px;
   border-radius: 999px;
-  background: #9632b4;
-  color: #111;
+  background: linear-gradient(
+    to right,
+    rgb(121, 80, 170),
+    rgb(117, 65, 196),
+    rgb(58, 25, 100)
+  );
+  color: #ffffff;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
@@ -126,9 +131,9 @@ body {
 .hero-title .muted {
   background: linear-gradient(
     to right,
-    rgb(109, 60, 168),
-    rgb(148, 80, 253),
-    rgb(99, 58, 153)
+    rgb(211, 177, 252),
+    rgb(117, 65, 196),
+    rgb(58, 25, 100)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -164,13 +169,23 @@ body {
 }
 
 .btn-primary {
-  background: #f4f3ef;
-  color: #000000;
+  background: linear-gradient(
+    to right,
+    rgb(91, 59, 129),
+    rgb(117, 65, 196),
+    rgb(58, 25, 100)
+  );
+  color: #fff7f7;
 }
 
 .btn-secondary {
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: #9a9a9a;
+}
+
+.btn-primary:hover{
+  background: #fff;
+  color:#000;
 }
 
 .btn-secondary:hover {
@@ -803,7 +818,7 @@ body {
   .process-line {
     top: 96px;
     left: 50%;
-    width: 1px;
+    width: 0px;
     height: 52px;
     transform: translateX(-50%);
   }
