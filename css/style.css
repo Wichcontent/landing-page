@@ -80,7 +80,7 @@ body {
   min-height: 42px;
   padding: 0 24px;
   border-radius: 999px;
-  background: #f4f3ef;
+  background: #9632b4;
   color: #111;
   text-decoration: none;
   font-size: 14px;
@@ -88,6 +88,10 @@ body {
 }
 
 /* Hero */
+/*h1{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}*/
 .hero {
   min-height: 100vh;
   padding: 150px 24px 80px;
@@ -108,17 +112,27 @@ body {
 }
 
 .hero-title {
-  max-width: 1050px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   color: #f4f3ef;
-  font-size: clamp(64px, 10vw, 142px);
-  font-weight: 900;
-  line-height: 0.86;
+  font-size: clamp(64px, 10vw, 110px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0;
 }
 
 .hero-title .muted {
-  color: #8a8a8a;
+  background: linear-gradient(
+    to right,
+    rgb(109, 60, 168),
+    rgb(148, 80, 253),
+    rgb(99, 58, 153)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-description {

@@ -115,7 +115,7 @@ function setupPackageButtons() {
     button.dataset.package = order[index];
 
     button.addEventListener("click", () => {
-      selectPackage(button.dataset.package, ture);
+      selectPackage(button.dataset.package);
     });
   });
 
@@ -123,7 +123,7 @@ function setupPackageButtons() {
     card.dataset.package = order[index];
 
     card.addEventListener("click", () => {
-      selectPackage(card.dataset.package, ture);
+      selectPackage(card.dataset.package);
     });
   });
 
@@ -131,7 +131,7 @@ function setupPackageButtons() {
     link.addEventListener("click", (event) => {
       event.preventDefault();
 
-      selectPackage(link.dataset.package, ture);
+      selectPackage(link.dataset.package);
 
       document.querySelector("#detalle-paquete").scrollIntoView({
         behavior: "smooth",
