@@ -40,7 +40,7 @@ const packages = {
     eyebrow: "Paquete 03",
     title: "Mini Tienda Digital",
     description: "Catálogo completo. Clientes comprando desde el día 1.",
-    price: "7,500",
+    price: "7,500 ±",
     meta: "MXN · 5–7 días hábiles",
     footer:
       "Ideal para negocios que venden productos y quieren mostrar catálogo.",
